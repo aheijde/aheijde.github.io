@@ -1,0 +1,11 @@
+body {
+	font-family: 'B612 Mono', monospace;
+	color: rgb(0, 255, 255);
+	background-color: rgb(46, 46, 46);
+	
+}
+
+model-viewer {
+	width: 800px;
+	height: 800px;
+}

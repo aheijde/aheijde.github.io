@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./test.css" type="text/css">
+  </head>
+
+<body>
+
+<h1>HySpex Baldur V-1024N</h1>
+
+<!-- Import the component -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+<script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+<!-- Use it like any other HTML element -->
+<style>
+  button{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: blue;
+    box-sizing: border-box;
+  }
+
+  button[slot="hotspot-straylight_left"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid blue;
+  }
+
+  button[slot="hotspot-straylight_right"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid blue;
+  }
+
+  #annotation{
+    background-color: #888888;
+    position: absolute;
+    transform: translate(10px, 10px);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  /* This keeps child nodes hidden while the element loads */
+  :not(:defined) > * {
+    display: none;
+  }
+</style>
+
+<model-viewer src="./model/37766-0 Customer drawing Baldur V-1024N.glb"  ar ar-modes="webxr scene-viewer quick-look fallback" ar-scale="auto" camera-controls alt="A 3D model of an HySpex camera" auto-rotate camera-controls>
+
+  <button slot="hotspot-cameralink" data-position="0.10335461801518211 0.3235921263694764 0.0067528487191880066" data-normal="0 1 0"><div id="annotation">CameraLink connector</div> </button>
+
+  <button slot="hotspot-serial_connector" data-position="0.11670334257837184 0.3230921328067779 -0.018859440269549693" data-normal="0 1 0"><div id="annotation">Serial connector</div> </button>
+
+  <button slot="hotspot-power_connector" data-position="0.09768301058455318 0.343913609304119 -0.014297087074951448" data-normal="0 1 0"><div id="annotation">Power connector</div> </button>
+
+  <button slot="hotspot-serial_number" data-position="0.01592969387856072 0.28204214572906494 -0.03339877360547542" data-normal="0 1 0"><div id="annotation">Here you will find the camera serial number and type</div> </button>
+
+  <button slot="hotspot-straylight_right" data-position="0.01272640890994458 0.09180378007225978 0.0009000006248242598" data-normal="0 0 1"><div id="annotation">Stray light shield</div> </button>
+
+  <button slot="hotspot-straylight_left" data-position="0.014714903321990117 0.09599354600615781 -0.0648999959230423" data-normal="0 0 -1"><div id="annotation">Stray light shield</div> </button>
+
+</model-viewer>
+
+</body>
+</html>
